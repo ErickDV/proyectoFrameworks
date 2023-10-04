@@ -1,0 +1,16 @@
+{
+  "name": "proyectoframeworks",
+  "version": "1.0.0",
+  "description": "Sistema gestor de certificados para cursos impartidos por el Centro de Desarrollo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "js",
+    "React"
+  ],
+  "author": "Diaz Villegas Erick, Hernandez Garcia Carlos Zahid",
+  "license": "ISC"
+}
