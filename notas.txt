@@ -1,0 +1,11 @@
+modificar base de datos
+crear loging
+inicio para alumnos
+inicio para maestros
+consulta de la lista de alumnos
+    buscar un alumno por expediente[?]
+agregar nuevos certificados
+agregar un certificado a un alumno 
+    y que se puedan eliminar los que ya tiene un alumno en caso de que exista un error
+registro de alumnos (?)[no]
+
