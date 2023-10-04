@@ -12,5 +12,8 @@
     "React"
   ],
   "author": "Diaz Villegas Erick, Hernandez Garcia Carlos Zahid",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
