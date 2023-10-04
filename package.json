@@ -4,6 +4,7 @@
   "description": "Sistema gestor de certificados para cursos impartidos por el Centro de Desarrollo",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,6 +15,8 @@
   "author": "Diaz Villegas Erick, Hernandez Garcia Carlos Zahid",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
   }
 }
