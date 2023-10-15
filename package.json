@@ -15,6 +15,8 @@
   "author": "Diaz Villegas Erick, Hernandez Garcia Carlos Zahid",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.5.1",
+    "bootstrap": "^5.3.2",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
