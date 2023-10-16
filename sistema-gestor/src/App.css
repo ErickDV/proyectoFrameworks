@@ -4,6 +4,7 @@
   gap: 1rem;
   max-width: 400px;
   margin: auto;
+  border-color: black;
 }
 
 .App {
