@@ -1,6 +1,6 @@
 import {useRef, useState, useEffect, useContext} from 'react';
 import AuthContext from './context/AuthProvider'
-import axios from './api/axios';
+import axios from 'axios' //'./api/axios';
 
 const LOGING_URL = '';
 const Login = () => {
@@ -23,17 +23,21 @@ const Login = () => {
         setErrmsg('');
     },[user,pwd])
 
-    const handleSubmit = async (e) =>{
-        e.preventDefault();
-    }
+   function handleSubmit (event) {
+        event.preventDefault();
+        axios.post('http://localhost:3000/login',{user, pwd})
+        .then(res => console.log(res, 'hola'))
+        .catch(err => console.log(err), 'ggbro')
+        setSuccess(true);
+   }
 
     return(
         <section className="contenedor">
             <h1>Inicio de sesion</h1>
             <form className='contenedor' onSubmit={handleSubmit}>
-                <label htmlFor="expediente" >Expediente</label>
+                <label htmlFor="userID" >userID</label>
                 <input  
-                    id='expediente' 
+                    id='userID' 
                     ref={userRef} 
                     autoComplete='off' 
                     //funcion anonima
