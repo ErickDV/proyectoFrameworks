@@ -25,10 +25,37 @@ const Login = () => {
 
    function handleSubmit (event) {
         event.preventDefault();
-        axios.post('http://localhost:3000/login',{user, pwd})
-        .then(res => console.log(res, 'hola'))
-        .catch(err => console.log(err), 'ggbro')
-        setSuccess(true);
+        //axios.post('http://localhost:3000/login',{user, pwd})
+        //.then(res => console.log(res, 'hola'))
+        //.catch(err => console.log(err), 'ggbro')
+        console.log(pwd, user)
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/user/login',
+            data: {
+                usuarioID: user,
+                userPassword: pwd
+            }
+        }).then(function(res) {
+            if(res.data.code === 200){
+                setSuccess(true);
+                console.log('hola')
+                console.log(res.data.message)
+                localStorage.setItem("token", res.data.message);
+                window.location.href = "./prueba.html";
+            }
+            else if(res.data.code === 401){
+                console.log("usuario o contrasena incorrecto")
+            }
+            else if(res.data.code === 500){
+                console.log("campos incompletos")
+            }
+            else{
+                alert("Usuario y/o contraseña incorrectos.")
+            }
+        }).catch(function(err){
+            console.log(err);
+        })
    }
 
     return(

@@ -47,7 +47,7 @@ user.post("/login", async(req, res, next)=>{
 
 
 user.get("/", async (req,res,next) =>{
-    const query = "SELECT * FROM user;";
+    const query = "SELECT * FROM usuarios;";
     const rows = await db.query(query);
 
     return res.status(200).json({code:200,message:rows})
